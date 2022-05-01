@@ -11,7 +11,10 @@ public class ResourceNotFoundException {
     private String fieldValue;
 
     public ResourceNotFoundException(String resourceName, String fieldName, String fieldValue) {
-        super(String.format("%s not found with %s : '%s' ",resourceName, fieldName, fieldValue));
+//        String error = String.format("%s not found with %s : '%s",resourceName, fieldName, fieldValue);
+//        super(error);
+        String.format("%s not found with %s : '%s' ",resourceName, fieldName, fieldValue);
+//        super(resourceName+" not found with", fieldName, " : ", fieldValue);
         this.resourceName = resourceName;
         this.fieldName = fieldName;
         this.fieldValue = fieldValue;
